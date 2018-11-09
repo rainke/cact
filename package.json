@@ -1,0 +1,11 @@
+{
+  "name": "canvas-act",
+  "version": "0.0.0",
+  "description": "canvas 框架",
+  "main": "build/cact.js",
+  "author": "rainke",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^3.1.6"
+  }
+}
