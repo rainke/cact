@@ -8,7 +8,7 @@ namespace cact {
     }
 
     export class EventDispatcher  {
-        private listeners: listeners = {};
+        listeners: listeners = {};
         constructor() {
             if(document.readyState !== 'complete') {
                 throw Error('在页面加载完毕前调用')
@@ -33,9 +33,8 @@ namespace cact {
             }
         }
 
-        dispatch(e: MouseEvent) {
+        dispatch(e: cact.SyntheticEvent) {
             const list = this.listeners[e.type];
-            console.log(this, e.type);
             if(list) {
                 list.forEach(listener => {
                     listener.call(this);
