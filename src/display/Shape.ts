@@ -1,11 +1,6 @@
-import Graphics from './graphics'
-export default class Shape extends Graphics {
+import Graphics from './Graphics'
+export default abstract class Shape extends Graphics {
     parent = null;
-    render(ctx: CanvasRenderingContext2D){
-
-    }
-
-    path(ctx){
-
-    }
+    abstract  draw(ctx: CanvasRenderingContext2D);
+    abstract  path(ctx);
 }

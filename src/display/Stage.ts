@@ -18,6 +18,9 @@ export default class Stage extends DisplayObject {
     constructor(renderTo: HTMLElement, option = {detect: true}) {
         super();
         renderTo.append(this.canvas);
+
+        this.canvas.width = 800;
+        this.canvas.height = 800;
         if(option.detect) {
             this.detect();
         }
@@ -39,8 +42,7 @@ export default class Stage extends DisplayObject {
     add(shape: Shape){
         this.children.push(shape);
         shape.parent = this;
-        shape.render(this.ctx);
-
+        shape.draw(this.ctx);
     }
 
     handleClick = (e: MouseEvent) => {
@@ -60,6 +62,15 @@ export default class Stage extends DisplayObject {
                 return child;
             }
         }
+    }
+
+    update(notClear: Boolean) {
+        if(!notClear){
+            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+        }
+        this.children.forEach((child)=> {
+            child.draw(this.ctx)
+        })
     }
 
     isTouched(child: Shape, e: MouseEvent){

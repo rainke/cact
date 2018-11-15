@@ -1,7 +1,7 @@
 import Shape from './Shape';
 
 export default class Rect extends Shape {
-    render(ctx){
+    draw(ctx){
         this.path(ctx);
         ctx.fill();
     }
