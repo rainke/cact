@@ -1,7 +1,6 @@
-namespace cact {
-    export class SyntheticEvent {
-        constructor(public type: string) {
-            
-        }
+
+export default class SyntheticEvent {
+    constructor(public type: string) {
+        
     }
 }

@@ -1,6 +1,5 @@
-///<reference path="../events/EventDispatcher.ts" />
-namespace cact {
-    export class DisplayObject extends cact.EventDispatcher {
-        public visible: boolean = true;
-    }
+import EventDispatcher from '../events/EventDispatcher';
+
+export default class DisplayObject extends EventDispatcher {
+    public visible: boolean = true;
 }

@@ -1,5 +1,5 @@
-namespace cact {
-    export class Graphics extends cact.DisplayObject {
-        
-    } 
-}
+import DisplayObject from './DisplayObject';
+
+export default class Graphics extends DisplayObject {
+    
+} 

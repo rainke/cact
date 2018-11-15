@@ -1,13 +1,11 @@
-/// <reference path="./graphics.ts"/>
-namespace cact {
-    export class Shape extends cact.Graphics {
-        parent = null;
-        render(ctx: CanvasRenderingContext2D){
+import Graphics from './graphics'
+export default class Shape extends Graphics {
+    parent = null;
+    render(ctx: CanvasRenderingContext2D){
 
-        }
+    }
 
-        path(ctx){
+    path(ctx){
 
-        }
     }
 }
